@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Variable create cart structure</title>
+</head>
+<body>
+    <h1>Cart Quantity</h1>
+    <button onclick="
+    updateCart();
+    ">show Quantity</button>
+    <button onclick="
+    updateCart(1);
+   
+    "
+    >Add to Cart</button>
+
+    <button onclick="
+   updateCart(2);
+    "
+    
+    >+2</button>
+    <button 
+    onclick="
+    updateCart(3);
+    "
+    >+3</button>
+
+    <button onclick="
+    cartQuantity = 0;
+    console.log(`cart quantity : ${cartQuantity}`);">
+        Reset Cart
+    </button>
+
+    <script >
+   let cartQuantity = 0;
+   function updateCart(quantity=0){
+      if(cartQuantity + quantity > 10){
+          alert(`The cart is full`);
+          return;
+      }
+      else{
+          cartQuantity += quantity;
+          console.log(`cart quantity : ${cartQuantity}`);
+      }
+   }
+
+   </script>
+</body>
+</html>
