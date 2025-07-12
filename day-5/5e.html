@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exersise</title>
+</head>
+<body>
+    <button onclick="
+            playGame('Heads');
+        
+        ">Heads</button>
+    <button onclick="
+         playGame('Tails');
+        ">Tails</button>
+
+    <script>
+    let number;
+    let score = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')) : {wins:0 ,losses:0};
+    function playGame(guess){
+        number = Math.random();
+        if((guess === 'Heads' && number <0.5) || (guess === 'Tails' && number >=0.5)){
+            alert(`you guess is ${guess} ,you win!
+             Wins : ${++score.wins} , losses : ${score.losses}`);
+             
+        }
+        else{
+            alert(`you guess is ${guess} ,you lose!
+             Wins : ${score.wins} , losses : ${++score.losses}`);
+             
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+    }
+      
+    </script>
+</body>
+</html>

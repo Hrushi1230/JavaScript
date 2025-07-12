@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object exersise</title>
+</head>
+<body>
+    <script>
+        function comparePrice(product1, product2){
+            if(product1.price < product2.price){
+                return product1;
+            }
+            else{
+                return product2;
+            }
+        }
+        let product1 ={
+            name: 'basketball',
+            price :2095
+        };
+        let product2 ={
+            name : 'socks',
+            price :1090
+        };
+        console.log(comparePrice(product1, product2));
+
+        function isSameProduct(product1, product2){
+
+            return product1.name === product2.name && product1.price === product2.price;
+        }
+
+        console.log(isSameProduct(product1, product1));
+        console.log(isSameProduct(product1, product2));
+        
+    </script>
+    
+</body>
+</html>
