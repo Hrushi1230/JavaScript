@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Variable create cart structure</title>
+</head>
+<body>
+    <h1>Cart Quantity</h1>
+    <button onclick="
+    updateCart();
+    ">show Quantity</button>
+    <button onclick="
+    updateCart(1);
+   
+    "
+    >Add to Cart</button>
+
+    <button onclick="
+   updateCart(2);
+    "
+    
+    >+2</button>
+    <button 
+    onclick="
+    updateCart(3);
+    "
+    >+3</button>
+    <button onclick="updateCart(4)">+4</button>
+    <button onclick="updateCart(5)">+5</button>
+
+    <button onclick="removeCart();">
+        Remove from cart
+    </button>
+    <button onclick="updateCart(-2)">-2</button>
+    <button onclick="updateCart(-3)">-3</button>
+
+    <h2 class="cart-result"></h2>
+
+
+
+
+
+    <script >
+   let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+   updateScore();
+
+   function updateCart(quantity=0){
+    if(quantity== -2 && cartQuantity < 2){
+      cartQuantity=0;
+    }
+    else if(quantity== -3 && cartQuantity < 3){
+        cartQuantity=0;
+    }
+    else{
+        cartQuantity+= quantity;
+    }
+    localStorage.setItem('cartQuantity',JSON.stringify(cartQuantity));
+    updateScore();
+      
+     
+   }
+   function removeCart(){
+    cartQuantity=0;
+    updateScore();
+   }
+   function updateScore(){
+     document.querySelector('.cart-result').innerHTML=`Cart quantity : ${cartQuantity}`;
+   }
+
+   </script>
+</body>
+</html>

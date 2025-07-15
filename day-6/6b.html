@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-6b</title>
+</head>
+<body>
+    <button  onclick="
+        Clicks('heads');
+        ">heads</button>
+    <button  onclick="
+        Clicks('tails');
+    ">tails</button>
+    <p class ="js-result">
+
+    </p>
+
+    <script>
+        function Clicks(name){
+            document.querySelector('.js-result').innerHTML = `you Chose ${name}`;
+        }
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM -6d</title>
+</head>
+<body>
+    <input placeholder="Type something" class="typing" onkeyup="
+        typing(event);
+        ">
+
+    <p class="result"></p>
+
+    <script>
+         let type="";
+      function typing(event){
+        if(event.key === 'Backspace'){
+           type=type.slice(0,-1);
+        }
+        else{
+            type+= event.key;
+        }
+       
+       document.querySelector('.result').innerHTML=type;
+      }
+    </script>
+
+</body>
+</html>
