@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8a</title>
+</head>
+<body>
+    <script>
+        function minMax(nums){
+            if(nums.length === 0) return {min : null , max : null};
+            let maxi =nums[0],mini=nums[0];
+            for(let i=0;i<nums.length ;i++){
+                if(maxi<nums[i]) maxi= nums[i];
+                if(mini > nums[i]) mini =nums[i];
+            }
+
+            return {min : mini , max : maxi};
+        }
+
+        console.log(minMax([]));
+        console.log(minMax([-2,3,-5,7,10]))
+
+    </script>
+    
+</body>
+</html>
