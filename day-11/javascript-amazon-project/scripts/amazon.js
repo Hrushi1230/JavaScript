@@ -1,3 +1,5 @@
+import products from '../data/products.js';
+
 let allHtml = "";
 products.forEach((product) => {
 
