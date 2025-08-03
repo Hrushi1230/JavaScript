@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Function</title>
+</head>
+<body>
+
+    <button onclick="" class="js-button">
+     Click
+    </button>
+
+    <script>
+        /*
+        const regularFun = function(param){
+            console.log("Hello regular fun");
+            return 5 ;
+        }
+
+        const arrowFun = (param) => {
+            console.log("Hello Arror function");
+            return 7;
+        };
+
+       console.log(arrowFun(4));
+        regularFun(6);
+
+        const oneline = () => 2+3;
+        console.log(oneline());
+
+        const object = {
+            method(){
+
+            }
+        }
+        */
+    //    const buttonElement =document.querySelector('.js-button');
+
+    //    const fun = () =>{
+    //      console.log("click");
+    //    };
+
+    //    buttonElement.addEventListener('click', fun);
+
+    //    buttonElement.removeEventListener('click',fun);
+
+    //    buttonElement.addEventListener('click' , () => {
+    //     console.log("click1");
+    //    });
+
+
+    console.log([1,-3,5].filter( (value , index) => {
+        // if(value >=0){
+        //     return true;
+        // }
+        // else {
+        //  return false;
+        // }
+
+        return value >= 0 ;
+    
+    }));
+
+    console.log([1,2,3].map((value , index)=>{
+       return value+3;
+    }));
+    console.log([1,2,3].map(value => value+3));
+
+    </script>
+    
+</body>
+</html>
