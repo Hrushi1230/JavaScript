@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubling</title>
+</head>
+<body>
+    <div class="first-conainer">
+        <div class="second-container">
+            <div class="third-container">
+                <button>click me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container1=document.querySelector(".first-conainer");
+        const container2=document.querySelector(".second-container");
+        const container3=document.querySelector(".third-container");
+
+        container1.addEventListener("click", (e)=>{
+            
+            alert("click container 1");
+            
+        });
+         container2.addEventListener("click", (e)=>{
+            e.stopPropagation();
+            alert("click container 2");
+        });
+         container3.addEventListener("click", ()=>{
+            alert("click container 3");
+        });
+    </script>
+</body>
+</html>
